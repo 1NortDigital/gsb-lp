@@ -309,56 +309,42 @@ section{padding:74px 0}
 
       <!-- FORM MULTI-STEP (igual original, ligado ao motor da agência) -->
       <div class="fcard" id="simule">
-        <span class="tag">Estudo Gratuito · Empresas</span>
-        <h4>Estudo de Viabilidade Corporativo</h4>
-        <p class="fsub">Descubra em minutos quanto a sua empresa pode economizar com uma usina solar própria. <strong>Gratuito e sem compromisso.</strong></p>
+        <span class="tag">Estudo de Viabilidade Grátis</span>
+        <h4>Simule a economia da sua empresa no Rio de Janeiro</h4>
+        <p class="fsub">Descubra em 1 minuto o tamanho da usina ideal e o valor economizado por mês.</p>
         <form id="leadForm" onsubmit="submitLead(event)">
-          <!-- ETAPA 1: Consumo e Local -->
+          <!-- ETAPA 1: Qualificação rápida (conta + região) -->
           <div class="step active" id="step1">
-            <div class="fg"><label for="f-sistema">Tipo do sistema *</label>
-              <select id="f-sistema" required>
-                <option value="">—Escolha uma opção—</option>
-                <option>Condomínio</option>
-                <option>Comercial</option>
-                <option>Indústria</option>
-                <option>Rural</option>
-                <option>Residencial</option>
-              </select>
-            </div>
-            <div class="fg"><label for="f-valor">Valor médio da conta de luz da empresa *</label>
+            <div class="fg"><label for="f-valor">Qual o valor médio mensal da sua conta de luz?</label>
               <select id="f-valor" required>
-                <option value="">Selecione a faixa...</option>
-                <option value="Menos de R$ 2.000/mês">Menos de R$ 2.000/mês</option>
-                <option value="R$ 2.000 a R$ 4.000/mês">R$ 2.000 a R$ 4.000/mês</option>
-                <option value="R$ 4.000 a R$ 8.000/mês">R$ 4.000 a R$ 8.000/mês</option>
-                <option value="R$ 8.000 a R$ 15.000/mês">R$ 8.000 a R$ 15.000/mês</option>
-                <option value="R$ 15.000 a R$ 30.000/mês">R$ 15.000 a R$ 30.000/mês</option>
-                <option value="Acima de R$ 30.000/mês">Acima de R$ 30.000/mês</option>
+                <option value="">Selecione uma opção...</option>
+                <option value="Abaixo de R$ 2.000">Abaixo de R$ 2.000</option>
+                <option value="R$ 2.000 a R$ 5.000">R$ 2.000 a R$ 5.000</option>
+                <option value="R$ 5.000 a R$ 10.000">R$ 5.000 a R$ 10.000</option>
+                <option value="Acima de R$ 10.000">Acima de R$ 10.000</option>
               </select>
-              <small style="display:block;font-size:11.5px;color:#9aa4a6;margin-top:5px">O estudo de viabilidade é para empresas com conta a partir de R$ 2.000/mês.</small>
             </div>
-            <div class="fg"><label for="f-cidade">Cidade / Local *</label>
+            <div class="fg"><label for="f-cidade">Onde fica a sua empresa / empreendimento?</label>
               <select id="f-cidade" required>
-                <option value="">Selecione...</option>
-                <optgroup label="Rio de Janeiro e Região Metropolitana">
-                  <option>Rio de Janeiro</option><option>Niterói</option><option>São Gonçalo</option><option>Duque de Caxias</option><option>Nova Iguaçu</option><option>Belford Roxo</option><option>São João de Meriti</option><option>Nilópolis</option><option>Mesquita</option><option>Queimados</option><option>Magé</option><option>Itaboraí</option><option>Maricá</option>
-                </optgroup>
-                <optgroup label="Interior / Outras regiões do RJ">
-                  <option>Petrópolis</option><option>Campos dos Goytacazes</option><option>Volta Redonda</option><option>Macaé</option><option>Cabo Frio</option><option>Angra dos Reis</option><option>Teresópolis</option><option>Nova Friburgo</option>
-                </optgroup>
-                <optgroup label="Outras"><option>Outra cidade do RJ</option><option>Outro estado</option></optgroup>
+                <option value="">Selecione a região...</option>
+                <option>Rio de Janeiro - Capital</option>
+                <option>Niterói / São Gonçalo</option>
+                <option>Baixada Fluminense</option>
+                <option>Região dos Lagos</option>
+                <option>Outra região do RJ</option>
               </select>
             </div>
             <div class="form-err" id="f-qual-err">No momento atendemos empresas com conta de energia acima de R$ 2.000/mês.</div>
-            <button type="button" class="btn-form" onclick="nextStep()">Avançar <span class="material-icons" aria-hidden="true">arrow_forward</span></button>
+            <button type="button" class="btn-form" onclick="nextStep()">Avançar para o Resultado <span class="material-icons" aria-hidden="true">arrow_forward</span></button>
           </div>
-          <!-- ETAPA 2: Contato (só empresas acima de R$ 2.000) -->
+          <!-- ETAPA 2: Contato & direcionamento -->
           <div class="step" id="step2">
-            <div class="fg"><label for="f-nome">Digite seu nome *</label><input type="text" id="f-nome" placeholder="Seu nome completo" autocomplete="name"></div>
-            <div class="fg"><label for="f-tel">Digite seu WhatsApp com DDD *</label><input type="tel" id="f-tel" placeholder="(21) 90000-0000" inputmode="tel" autocomplete="tel"><div class="form-err" id="f-tel-err">Informe um WhatsApp válido com DDD.</div></div>
-            <div class="fg"><label for="f-email">Digite seu e-mail *</label><input type="email" id="f-email" placeholder="voce@empresa.com" autocomplete="email"></div>
+            <p style="font-family:'Poppins';font-weight:700;color:var(--ink);font-size:15.5px;line-height:1.35;margin-bottom:14px">Para onde devemos enviar seu estudo de viabilidade?</p>
+            <div class="fg"><label for="f-nome">Nome completo / Nome da empresa *</label><input type="text" id="f-nome" placeholder="Seu nome ou o da empresa" autocomplete="name"></div>
+            <div class="fg"><label for="f-tel">WhatsApp / Telefone *</label><input type="tel" id="f-tel" placeholder="(21) 90000-0000" inputmode="tel" autocomplete="tel"><div class="form-err" id="f-tel-err">Informe um WhatsApp válido com DDD.</div></div>
+            <div class="fg"><label for="f-email">E-mail corporativo *</label><input type="email" id="f-email" placeholder="voce@empresa.com" autocomplete="email"></div>
             <button type="submit" class="btn-form" id="btn-submit">
-              <span id="btn-submit-text">Enviar solicitação</span>
+              <span id="btn-submit-text">Receber Simulação no WhatsApp <span class="material-icons" aria-hidden="true">arrow_forward</span></span>
               <span class="spinner" id="spin-submit"></span>
             </button>
             <button type="button" class="btn-back" onclick="prevStep()">← Voltar</button>
@@ -706,14 +692,12 @@ function hideErr(id){const e=document.getElementById(id);if(e)e.classList.remove
 
 // ---- MULTI-STEP (Etapa 1 = Consumo e Local · gate R$ 2.000) ----
 function nextStep(){
-  const sistema=document.getElementById('f-sistema').value;
   const faixa=document.getElementById('f-valor').value;
   const cidade=document.getElementById('f-cidade').value;
   hideErr('f-qual-err');
-  if(!sistema){alert('Selecione o tipo do sistema.');return;}
-  if(!faixa){alert('Selecione a faixa da conta de energia.');document.getElementById('f-valor').focus();return;}
-  if(!cidade){alert('Selecione sua cidade / local.');document.getElementById('f-cidade').focus();return;}
-  if(faixa==='Menos de R$ 2.000/mês'){
+  if(!faixa){alert('Selecione a faixa da sua conta de luz.');document.getElementById('f-valor').focus();return;}
+  if(!cidade){alert('Selecione a região da sua empresa.');document.getElementById('f-cidade').focus();return;}
+  if(faixa==='Abaixo de R$ 2.000'){
     showErr('f-qual-err','Nosso estudo de viabilidade é para empresas com conta acima de R$ 2.000/mês. Para valores menores, fale conosco pelo site principal.');
     document.getElementById('f-valor').focus();
     try{ if(window.fbq) fbq('trackCustom','LeadNaoQualificado'); }catch(e){}
@@ -748,21 +732,20 @@ async function submitLead(e){
   if(!validPhone(tel)){showErr('f-tel-err','Informe um WhatsApp válido com DDD.');return;}
   if(tel.replace(/\D/g,'').startsWith('55')){showErr('f-tel-err','Não use o DDI 55, apenas DDD + número.');return;}
   if(!email){alert('Digite seu e-mail.');document.getElementById('f-email').focus();return;}
-  const sistema=document.getElementById('f-sistema').value;
   const cidade=document.getElementById('f-cidade').value;
   const faixa=document.getElementById('f-valor').value;
   const btn=document.getElementById('btn-submit');btn.classList.add('loading');
   document.getElementById('btn-submit-text').style.display='none';document.getElementById('spin-submit').style.display='inline-block';
   const ip=await getIP();const utms=mergeUTMs();
-  const payload={form_type:'lead_principal',pagina:PAGINA,nome,email,telefone:tel,sistema,cidade,valor_fatura:faixa,qualificado:'true',ip,...utms,timestamp:new Date().toISOString()};
+  const payload={form_type:'lead_principal',pagina:PAGINA,nome,email,telefone:tel,cidade,valor_fatura:faixa,qualificado:'true',ip,...utms,timestamp:new Date().toISOString()};
   await sendWebhook(payload);fireLead();
   dataLayer.push({event:'lead_gerado',form_type:'principal',telefone:tel,...utms});
   const wppMsg=encodeURIComponent(
-    `Olá GSB Energia Solar!\n\nVim pelo site e quero meu Estudo de Viabilidade Corporativo.\n\n`+
-    `*Nome:* ${nome}\n*WhatsApp:* ${tel}\n*E-mail:* ${email}\n*Tipo do sistema:* ${sistema}\n*Cidade:* ${cidade}\n*Conta de energia:* ${faixa}`
+    `Olá GSB Energia Solar!\n\nQuero receber meu Estudo de Viabilidade da usina solar.\n\n`+
+    `*Nome / Empresa:* ${nome}\n*WhatsApp:* ${tel}\n*E-mail:* ${email}\n*Conta de energia:* ${faixa}\n*Região:* ${cidade}`
   );
-  if(REDIRECT_OBRIGADO){window.location.href=REDIRECT_OBRIGADO;}
-  else{window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${wppMsg}`,'_blank');btn.classList.remove('loading');document.getElementById('btn-submit-text').style.display='';document.getElementById('spin-submit').style.display='none';}
+  // redireciona direto para a conversa no WhatsApp com os dados preenchidos
+  window.location.href = REDIRECT_OBRIGADO || `https://wa.me/${WHATSAPP_NUMBER}?text=${wppMsg}`;
 }
 
 // ---- MODAL ----
