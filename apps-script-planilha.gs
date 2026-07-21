@@ -17,7 +17,7 @@ var SHEET_NAME = 'Leads'; // nome da aba; será criada automaticamente se não e
 
 var COLS = [
   'timestamp','form_type','pagina','nome','email','telefone',
-  'sistema','cidade','valor_fatura','qualificado','ip',
+  'tipo','modelo','sistema','cidade','valor_fatura','qualificado','ip',
   'utm_source','utm_medium','utm_campaign','utm_content','utm_term',
   'gclid','fbclid','fbp','fbc','page_url','page_referer','landing_url','clickup_client_id'
 ];

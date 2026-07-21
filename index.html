@@ -45,7 +45,7 @@ End GTM -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
 .material-icons{font-size:1em;vertical-align:-0.125em;line-height:1;display:inline-block}
@@ -68,7 +68,7 @@ html{scroll-behavior:smooth;overflow-x:hidden}
   --r:10px;--t:.25s ease;
 }
 body{font-family:'Lato',sans-serif;background:var(--white);color:var(--gray);line-height:1.6;font-size:16px;overflow-x:hidden}
-h1,h2,h3,h4,h5{font-family:'Poppins',sans-serif;font-weight:700;color:var(--ink);line-height:1.3}
+h1,h2,h3,h4,h5{font-family:'Montserrat',sans-serif;font-weight:700;color:var(--ink);line-height:1.3}
 .container{max-width:1240px;margin:0 auto;padding:0 24px}
 img{max-width:100%;display:block}
 a{color:var(--blue);text-decoration:none}
@@ -78,7 +78,7 @@ a{color:var(--blue);text-decoration:none}
 .divider.center{margin-left:auto;margin-right:auto}
 
 /* BUTTONS */
-.btn{display:inline-flex;align-items:center;gap:9px;font-family:'Poppins',sans-serif;font-weight:700;font-size:16px;padding:16px 40px;border-radius:var(--r);cursor:pointer;border:none;transition:all var(--t);text-decoration:none;line-height:1}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;padding:16px 40px;border-radius:var(--r);cursor:pointer;border:none;transition:all var(--t);text-decoration:none;line-height:1}
 .btn-blue{background:var(--blue-light);color:#fff}
 .btn-blue:hover{background:var(--blue);color:#fff;transform:translateY(-2px)}
 .btn-wpp{background:#25D366;color:#fff}
@@ -97,16 +97,16 @@ a{color:var(--blue);text-decoration:none}
 .hero-ov{position:absolute;inset:0;z-index:1;background:linear-gradient(120deg,rgba(8,26,37,.90) 0%,rgba(8,26,37,.72) 45%,rgba(8,26,37,.55) 100%)}
 .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:64px 0}
 @media(max-width:960px){.hero-grid{grid-template-columns:1fr;gap:32px;padding:40px 0}}
-.hero-left h2{font-size:clamp(26px,3.4vw,40px);color:#fff;font-weight:800;line-height:1.25;margin-bottom:16px}
+.hero-left h2{font-size:clamp(26px,3.3vw,38px);color:#fff;font-weight:700;line-height:1.32;margin-bottom:16px}
 .hero-left .sub{font-size:19px;color:rgba(255,255,255,.9);font-weight:400;margin-bottom:8px}
 .hero-feats{list-style:none;margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:11px 20px}
 @media(max-width:560px){.hero-feats{grid-template-columns:1fr}}
-.hero-feats li{display:flex;align-items:center;gap:9px;color:#fff;font-size:15.5px;font-weight:700;font-family:'Poppins'}
+.hero-feats li{display:flex;align-items:center;gap:9px;color:#fff;font-size:15.5px;font-weight:700;font-family:'Montserrat'}
 .hero-feats li .material-icons{color:var(--blue-light);font-size:20px}
 
 /* FORM CARD */
 .fcard{background:#fff;border-radius:14px;padding:28px 26px;box-shadow:var(--sh-md);position:relative}
-.fcard .tag{display:inline-block;background:var(--blue);color:#fff;font-family:'Poppins';font-weight:700;font-size:12px;letter-spacing:.5px;padding:5px 14px;border-radius:20px;margin-bottom:12px;text-transform:uppercase}
+.fcard .tag{display:inline-block;background:var(--blue);color:#fff;font-family:'Montserrat';font-weight:700;font-size:12px;letter-spacing:.5px;padding:5px 14px;border-radius:20px;margin-bottom:12px;text-transform:uppercase}
 .fcard h3{font-size:24px;color:var(--ink);margin-bottom:6px}
 .fcard h4{font-size:16px;color:var(--blue);font-weight:700;margin-bottom:4px}
 .fcard .fsub{font-size:13.5px;color:var(--gray);margin-bottom:16px}
@@ -114,7 +114,7 @@ a{color:var(--blue);text-decoration:none}
 .step.active{display:block}
 @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 .fg{margin-bottom:13px}
-.fg label{display:block;font-size:13px;font-weight:700;color:var(--ink);font-family:'Poppins';margin-bottom:5px}
+.fg label{display:block;font-size:13px;font-weight:700;color:var(--ink);font-family:'Montserrat';margin-bottom:5px}
 .fg input,.fg select{width:100%;padding:12px 14px;background:#fbfcfc;border:1px solid #ccc;border-radius:8px;color:var(--ink);font-family:'Lato';font-size:15px;transition:border-color var(--t)}
 .fg input:focus,.fg select:focus{outline:none;border-color:var(--blue)}
 .fg input::placeholder{color:#9aa4a6}
@@ -124,15 +124,15 @@ a{color:var(--blue);text-decoration:none}
 .radios{display:flex;gap:10px;flex-wrap:wrap;margin-top:2px}
 .radios label{display:inline-flex;cursor:pointer;margin:0}
 .radios input{position:absolute;opacity:0;width:0;height:0}
-.radios span{display:inline-block;padding:8px 16px;font-size:13px;font-family:'Poppins';font-weight:600;border-radius:50px;border:1px solid #ccc;color:var(--gray);transition:all var(--t)}
+.radios span{display:inline-block;padding:8px 16px;font-size:13px;font-family:'Montserrat';font-weight:600;border-radius:50px;border:1px solid #ccc;color:var(--gray);transition:all var(--t)}
 .radios input:checked+span{background:var(--gold);border-color:var(--gold);color:#fff}
 .radios span:hover{border-color:var(--gold)}
-.btn-form{width:100%;padding:14px;font-family:'Poppins';font-weight:700;font-size:16px;color:#fff;background:var(--blue-deep);border:none;border-radius:0 60px 60px 60px;cursor:pointer;transition:all var(--t);display:flex;align-items:center;justify-content:center;gap:8px;margin-top:6px}
+.btn-form{width:100%;padding:14px;font-family:'Montserrat';font-weight:700;font-size:16px;color:#fff;background:var(--blue-deep);border:none;border-radius:0 60px 60px 60px;cursor:pointer;transition:all var(--t);display:flex;align-items:center;justify-content:center;gap:8px;margin-top:6px}
 .btn-form:hover{background:var(--gold);color:#fff}
 .btn-form.loading{opacity:.7;pointer-events:none}
 .spinner{width:19px;height:19px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;display:none}
 @keyframes spin{to{transform:rotate(360deg)}}
-.btn-back{background:none;border:none;color:var(--gray);font-family:'Poppins';font-weight:600;font-size:14px;cursor:pointer;margin-top:10px;text-decoration:underline}
+.btn-back{background:none;border:none;color:var(--gray);font-family:'Montserrat';font-weight:600;font-size:14px;cursor:pointer;margin-top:10px;text-decoration:underline}
 .form-priv{font-size:11.5px;color:#9aa4a6;text-align:center;margin-top:10px}
 .form-err{font-size:12px;color:#DC2626;margin-top:4px;display:none}
 .form-err.show{display:block}
@@ -147,8 +147,8 @@ section{padding:74px 0}
 .stats{background:linear-gradient(120deg,var(--blue) 0%,var(--blue-light) 100%);padding:60px 0 76px;position:relative}
 .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center;position:relative;z-index:2}
 @media(max-width:700px){.stats-grid{grid-template-columns:1fr;gap:30px}}
-.stat .n{font-family:'Poppins';font-weight:800;font-size:clamp(38px,5vw,56px);color:#fff;line-height:1}
-.stat .l{font-family:'Poppins';font-weight:600;font-size:16px;color:rgba(255,255,255,.92);margin-top:6px}
+.stat .n{font-family:'Montserrat';font-weight:700;font-size:clamp(38px,5vw,56px);color:#fff;line-height:1}
+.stat .l{font-family:'Montserrat';font-weight:600;font-size:16px;color:rgba(255,255,255,.92);margin-top:6px}
 .stats .wave{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:70px;z-index:1}
 .stats .wave svg{width:100%;height:100%;display:block}
 
@@ -165,7 +165,7 @@ section{padding:74px 0}
 .proj-specs{list-style:none;display:inline-flex;flex-direction:column;gap:9px;text-align:left}
 .proj-specs li{display:flex;align-items:center;gap:9px;font-size:14.5px;color:var(--gray)}
 .proj-specs li .material-icons{font-size:19px;color:var(--blue);flex-shrink:0}
-.proj-specs li b{color:var(--ink);font-family:'Poppins'}
+.proj-specs li b{color:var(--ink);font-family:'Montserrat'}
 
 /* VIDEO */
 .video-wrap{max-width:900px;margin:0 auto;border-radius:14px;overflow:hidden;box-shadow:var(--sh-md);background:#000}
@@ -237,11 +237,16 @@ section{padding:74px 0}
 .btn-wpp{box-shadow:0 8px 22px rgba(37,211,102,.30)}
 
 /* eyebrow acima dos títulos */
-.eyebrow{display:block;font-family:'Poppins';font-weight:700;font-size:12.5px;letter-spacing:2.6px;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.eyebrow{display:block;font-family:'Montserrat';font-weight:700;font-size:12.5px;letter-spacing:2.6px;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
 
 /* hero: leve refino de leitura */
 .hero-ov{background:linear-gradient(120deg,rgba(8,26,37,.92) 0%,rgba(8,26,37,.74) 45%,rgba(8,26,37,.5) 100%)}
-.hero-left h2{letter-spacing:-.3px}
+.hero-left h2{letter-spacing:-.1px}
+/* progress dots do formulário */
+.fsteps{display:flex;gap:6px;margin-bottom:16px}
+.fsteps span{height:5px;flex:1;border-radius:4px;background:var(--line);transition:background .25s ease}
+.fsteps span.on{background:var(--blue)}
+.btn-back{display:inline-block;margin-left:12px}
 .fcard{border:1px solid rgba(255,255,255,.6)}
 .fcard .tag{box-shadow:0 6px 16px rgba(8,172,242,.35)}
 
@@ -296,26 +301,38 @@ section{padding:74px 0}
   <div class="container">
     <div class="hero-grid">
       <div class="hero-left">
-        <h2>A sua empresa no Rio pode reduzir até 95% da conta de luz — sem tirar R$ 1,00 do caixa.</h2>
-        <p class="sub">Instalamos a usina solar <strong style="color:#fff">própria da sua empresa</strong> sem pagamento adiantado: sistema financiado em até 120x, com até 120 dias de carência. A própria economia da energia paga a parcela do financiamento.</p>
+        <h2>Especialistas em soluções energéticas para empresas no Rio de Janeiro que pagam mais de R$ 2.000 de luz.</h2>
+        <p class="sub">Escolha o melhor modelo para o seu caixa: reduza até <strong style="color:#fff">30% da fatura sem nenhum investimento</strong> (desconto imediato) ou instale sua <strong style="color:#fff">Usina Solar Própria</strong> com opções de pagamento diferenciadas e zero entrada.</p>
         <div class="divider"></div>
         <ul class="hero-feats">
-          <li><span class="material-icons" aria-hidden="true">account_balance_wallet</span> Risco zero: sua empresa não descapitaliza</li>
-          <li><span class="material-icons" aria-hidden="true">verified</span> Homologação garantida na Light e Enel</li>
-          <li><span class="material-icons" aria-hidden="true">solar_power</span> Usina própria — não é assinatura nem desconto</li>
-          <li><span class="material-icons" aria-hidden="true">engineering</span> Engenharia e instalação com equipe própria</li>
+          <li><span class="material-icons" aria-hidden="true">apartment</span> Foco 100% B2B: comércios, indústrias, condomínios e usinas</li>
+          <li><span class="material-icons" aria-hidden="true">trending_down</span> Você escolhe: desconto na conta (sem obras) ou geração própria</li>
+          <li><span class="material-icons" aria-hidden="true">shield</span> Risco zero: sem investimento adiantado ou taxas ocultas</li>
+          <li><span class="material-icons" aria-hidden="true">bolt</span> Especialistas locais: aprovação e regulação na Light e Enel RJ</li>
         </ul>
       </div>
 
       <!-- FORM MULTI-STEP (igual original, ligado ao motor da agência) -->
       <div class="fcard" id="simule">
-        <span class="tag">Estudo de Viabilidade Grátis</span>
-        <h4>Simule a economia da sua empresa no Rio de Janeiro</h4>
-        <p class="fsub">Descubra em 1 minuto o tamanho da usina ideal e o valor economizado por mês.</p>
+        <span class="tag">Consultoria Gratuita</span>
+        <h4>Simule a Solução Ideal para a sua Empresa</h4>
+        <p class="fsub">Descubra em 1 minuto qual modelo (Desconto ou Usina) gera mais retorno para o seu negócio no RJ.</p>
         <form id="leadForm" onsubmit="submitLead(event)">
-          <!-- ETAPA 1: Qualificação rápida (conta + região) -->
+          <div class="fsteps" aria-hidden="true"><span class="on"></span><span></span><span></span></div>
+
+          <!-- ETAPA 1: Perfil (tipo + fatura) -->
           <div class="step active" id="step1">
-            <div class="fg"><label for="f-valor">Qual o valor médio mensal da sua conta de luz?</label>
+            <div class="fg"><label for="f-tipo">Tipo do imóvel / projeto</label>
+              <select id="f-tipo" required>
+                <option value="">Selecione uma opção...</option>
+                <option>Residencial Grandes Contas</option>
+                <option>Comercial</option>
+                <option>Condomínio</option>
+                <option>Industrial</option>
+                <option>Usina Solar</option>
+              </select>
+            </div>
+            <div class="fg"><label for="f-valor">Valor médio da fatura de energia</label>
               <select id="f-valor" required>
                 <option value="">Selecione uma opção...</option>
                 <option value="Abaixo de R$ 2.000">Abaixo de R$ 2.000</option>
@@ -324,7 +341,20 @@ section{padding:74px 0}
                 <option value="Acima de R$ 10.000">Acima de R$ 10.000</option>
               </select>
             </div>
-            <div class="fg"><label for="f-cidade">Onde fica a sua empresa / empreendimento?</label>
+            <div class="form-err" id="f-qual-err">No momento atendemos empresas com conta de energia acima de R$ 2.000/mês.</div>
+            <button type="button" class="btn-form" onclick="step1Next()">Avançar <span class="material-icons" aria-hidden="true">arrow_forward</span></button>
+          </div>
+
+          <!-- ETAPA 2: Modelo + Região -->
+          <div class="step" id="step2">
+            <div class="fg"><label for="f-modelo">Qual modelo mais atrai você?</label>
+              <select id="f-modelo" required>
+                <option value="">Selecione uma opção...</option>
+                <option>Desconto de 30% SEM investimento</option>
+                <option>Energia Solar com condições diferenciadas</option>
+              </select>
+            </div>
+            <div class="fg"><label for="f-cidade">Região do RJ</label>
               <select id="f-cidade" required>
                 <option value="">Selecione a região...</option>
                 <option>Rio de Janeiro - Capital</option>
@@ -334,20 +364,21 @@ section{padding:74px 0}
                 <option>Outra região do RJ</option>
               </select>
             </div>
-            <div class="form-err" id="f-qual-err">No momento atendemos empresas com conta de energia acima de R$ 2.000/mês.</div>
-            <button type="button" class="btn-form" onclick="nextStep()">Avançar para o Resultado <span class="material-icons" aria-hidden="true">arrow_forward</span></button>
+            <button type="button" class="btn-form" onclick="step2Next()">Avançar <span class="material-icons" aria-hidden="true">arrow_forward</span></button>
+            <button type="button" class="btn-back" onclick="showStep(1)">← Voltar</button>
           </div>
-          <!-- ETAPA 2: Contato & direcionamento -->
-          <div class="step" id="step2">
-            <p style="font-family:'Poppins';font-weight:700;color:var(--ink);font-size:15.5px;line-height:1.35;margin-bottom:14px">Para onde devemos enviar seu estudo de viabilidade?</p>
-            <div class="fg"><label for="f-nome">Nome completo / Nome da empresa *</label><input type="text" id="f-nome" placeholder="Seu nome ou o da empresa" autocomplete="name"></div>
-            <div class="fg"><label for="f-tel">WhatsApp / Telefone *</label><input type="tel" id="f-tel" placeholder="(21) 90000-0000" inputmode="tel" autocomplete="tel"><div class="form-err" id="f-tel-err">Informe um WhatsApp válido com DDD.</div></div>
-            <div class="fg"><label for="f-email">E-mail corporativo *</label><input type="email" id="f-email" placeholder="voce@empresa.com" autocomplete="email"></div>
+
+          <!-- ETAPA 3: Contato -->
+          <div class="step" id="step3">
+            <p style="font-family:'Montserrat';font-weight:700;color:var(--ink);font-size:15.5px;line-height:1.35;margin-bottom:14px">Para onde enviamos seu diagnóstico?</p>
+            <div class="fg"><label for="f-nome">Nome completo *</label><input type="text" id="f-nome" placeholder="Seu nome" autocomplete="name"></div>
+            <div class="fg"><label for="f-tel">WhatsApp com DDD *</label><input type="tel" id="f-tel" placeholder="(21) 90000-0000" inputmode="tel" autocomplete="tel"><div class="form-err" id="f-tel-err">Informe um WhatsApp válido com DDD.</div></div>
+            <div class="fg"><label for="f-email">E-mail *</label><input type="email" id="f-email" placeholder="voce@empresa.com" autocomplete="email"></div>
             <button type="submit" class="btn-form" id="btn-submit">
-              <span id="btn-submit-text">Receber Simulação no WhatsApp <span class="material-icons" aria-hidden="true">arrow_forward</span></span>
+              <span id="btn-submit-text">Receber Diagnóstico no WhatsApp <span class="material-icons" aria-hidden="true">arrow_forward</span></span>
               <span class="spinner" id="spin-submit"></span>
             </button>
-            <button type="button" class="btn-back" onclick="prevStep()">← Voltar</button>
+            <button type="button" class="btn-back" onclick="showStep(2)">← Voltar</button>
           </div>
         </form>
         <p class="form-priv"><span class="material-icons" aria-hidden="true">lock</span> Seus dados estão seguros. Sem spam.</p>
@@ -690,23 +721,32 @@ function validPhone(p){return p.replace(/\D/g,'').length>=10}
 function showErr(id,m){const e=document.getElementById(id);if(e){e.textContent=m;e.classList.add('show')}}
 function hideErr(id){const e=document.getElementById(id);if(e)e.classList.remove('show')}
 
-// ---- MULTI-STEP (Etapa 1 = Consumo e Local · gate R$ 2.000) ----
-function nextStep(){
+// ---- MULTI-STEP (3 etapas · gate R$ 2.000 na Etapa 1) ----
+function showStep(n){
+  [1,2,3].forEach(i=>{const s=document.getElementById('step'+i);if(s)s.classList.toggle('active',i===n);});
+  document.querySelectorAll('.fsteps span').forEach((d,i)=>d.classList.toggle('on',i<n));
+}
+function step1Next(){
+  const tipo=document.getElementById('f-tipo').value;
   const faixa=document.getElementById('f-valor').value;
-  const cidade=document.getElementById('f-cidade').value;
   hideErr('f-qual-err');
-  if(!faixa){alert('Selecione a faixa da sua conta de luz.');document.getElementById('f-valor').focus();return;}
-  if(!cidade){alert('Selecione a região da sua empresa.');document.getElementById('f-cidade').focus();return;}
+  if(!tipo){alert('Selecione o tipo do imóvel / projeto.');document.getElementById('f-tipo').focus();return;}
+  if(!faixa){alert('Selecione a faixa da conta de energia.');document.getElementById('f-valor').focus();return;}
   if(faixa==='Abaixo de R$ 2.000'){
-    showErr('f-qual-err','Nosso estudo de viabilidade é para empresas com conta acima de R$ 2.000/mês. Para valores menores, fale conosco pelo site principal.');
+    showErr('f-qual-err','Nosso atendimento é para empresas com conta acima de R$ 2.000/mês. Para valores menores, fale conosco pelo site principal.');
     document.getElementById('f-valor').focus();
     try{ if(window.fbq) fbq('trackCustom','LeadNaoQualificado'); }catch(e){}
     return;
   }
-  document.getElementById('step1').classList.remove('active');
-  document.getElementById('step2').classList.add('active');
+  showStep(2);
 }
-function prevStep(){document.getElementById('step2').classList.remove('active');document.getElementById('step1').classList.add('active');}
+function step2Next(){
+  const modelo=document.getElementById('f-modelo').value;
+  const cidade=document.getElementById('f-cidade').value;
+  if(!modelo){alert('Escolha o modelo que mais te atrai.');document.getElementById('f-modelo').focus();return;}
+  if(!cidade){alert('Selecione a região do RJ.');document.getElementById('f-cidade').focus();return;}
+  showStep(3);
+}
 
 // ---- WEBHOOK + PLANILHA ----
 async function sendWebhook(payload){
@@ -732,17 +772,19 @@ async function submitLead(e){
   if(!validPhone(tel)){showErr('f-tel-err','Informe um WhatsApp válido com DDD.');return;}
   if(tel.replace(/\D/g,'').startsWith('55')){showErr('f-tel-err','Não use o DDI 55, apenas DDD + número.');return;}
   if(!email){alert('Digite seu e-mail.');document.getElementById('f-email').focus();return;}
-  const cidade=document.getElementById('f-cidade').value;
+  const tipo=document.getElementById('f-tipo').value;
   const faixa=document.getElementById('f-valor').value;
+  const modelo=document.getElementById('f-modelo').value;
+  const cidade=document.getElementById('f-cidade').value;
   const btn=document.getElementById('btn-submit');btn.classList.add('loading');
   document.getElementById('btn-submit-text').style.display='none';document.getElementById('spin-submit').style.display='inline-block';
   const ip=await getIP();const utms=mergeUTMs();
-  const payload={form_type:'lead_principal',pagina:PAGINA,nome,email,telefone:tel,cidade,valor_fatura:faixa,qualificado:'true',ip,...utms,timestamp:new Date().toISOString()};
+  const payload={form_type:'lead_principal',pagina:PAGINA,nome,email,telefone:tel,tipo,modelo,cidade,valor_fatura:faixa,qualificado:'true',ip,...utms,timestamp:new Date().toISOString()};
   await sendWebhook(payload);fireLead();
   dataLayer.push({event:'lead_gerado',form_type:'principal',telefone:tel,...utms});
   const wppMsg=encodeURIComponent(
-    `Olá GSB Energia Solar!\n\nQuero receber meu Estudo de Viabilidade da usina solar.\n\n`+
-    `*Nome / Empresa:* ${nome}\n*WhatsApp:* ${tel}\n*E-mail:* ${email}\n*Conta de energia:* ${faixa}\n*Região:* ${cidade}`
+    `Olá GSB Energia Solar!\n\nQuero receber meu diagnóstico de economia de energia.\n\n`+
+    `*Nome / Empresa:* ${nome}\n*WhatsApp:* ${tel}\n*E-mail:* ${email}\n*Tipo:* ${tipo}\n*Modelo de interesse:* ${modelo}\n*Conta de energia:* ${faixa}\n*Região:* ${cidade}`
   );
   // redireciona direto para a conversa no WhatsApp com os dados preenchidos
   window.location.href = REDIRECT_OBRIGADO || `https://wa.me/${WHATSAPP_NUMBER}?text=${wppMsg}`;
