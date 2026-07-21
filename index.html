@@ -244,7 +244,7 @@ section{padding:74px 0}
 .eyebrow{display:block;font-family:'Inter';font-weight:700;font-size:12.5px;letter-spacing:2.6px;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
 
 /* hero: leve refino de leitura */
-.hero-ov{background:linear-gradient(120deg,rgba(8,26,37,.92) 0%,rgba(8,26,37,.74) 45%,rgba(8,26,37,.5) 100%)}
+.hero-ov{background:linear-gradient(112deg,rgba(5,16,25,.96) 0%,rgba(5,16,25,.86) 42%,rgba(8,26,37,.6) 100%)}
 .hero-left h2{letter-spacing:-.1px}
 /* progress dots do formulário */
 .fsteps{display:flex;gap:6px;margin-bottom:16px}
@@ -339,16 +339,16 @@ section{padding:74px 0}
         <p class="sub">Escolha o melhor modelo para o seu caixa: reduza até <strong style="color:#fff">30% da fatura sem nenhum investimento</strong> (desconto imediato) ou instale sua <strong style="color:#fff">Usina Solar Própria</strong> com opções de pagamento diferenciadas.</p>
         <div class="divider"></div>
         <ul class="hero-feats">
-          <li><span class="material-icons" aria-hidden="true">apartment</span> Foco 100% B2B: comércios, indústrias, condomínios e usinas</li>
-          <li><span class="material-icons" aria-hidden="true">trending_down</span> Você escolhe: desconto na conta (sem obras) ou geração própria</li>
-          <li><span class="material-icons" aria-hidden="true">shield</span> Risco zero: sem investimento adiantado ou taxas ocultas</li>
-          <li><span class="material-icons" aria-hidden="true">bolt</span> Especialistas locais: aprovação e regulação na Light e Enel RJ</li>
+          <li><span class="material-icons" aria-hidden="true">apartment</span> Foco 100% B2B: Comércios, indústrias, condomínios e usinas.</li>
+          <li><span class="material-icons" aria-hidden="true">trending_down</span> Você escolhe: Desconto na conta (sem obras) ou geração própria.</li>
+          <li><span class="material-icons" aria-hidden="true">shield</span> Risco zero: Sem investimento adiantado ou taxas ocultas.</li>
+          <li><span class="material-icons" aria-hidden="true">bolt</span> Especialistas locais: Aprovação e regulação na Light e Enel RJ.</li>
         </ul>
       </div>
 
       <!-- FORM MULTI-STEP (igual original, ligado ao motor da agência) -->
       <div class="fcard" id="simule">
-        <span class="tag">Consultoria Gratuita</span>
+        <span class="tag">CONSULTORIA GRATUITA</span>
         <h4>Simule a Solução Ideal para a sua Empresa</h4>
         <p class="fsub">Descubra em 1 minuto qual modelo (Desconto ou Usina) gera mais retorno para o seu negócio no RJ.</p>
         <form id="leadForm" onsubmit="submitLead(event)">
@@ -359,11 +359,11 @@ section{padding:74px 0}
             <div class="fg"><label for="f-tipo">Tipo do imóvel / projeto</label>
               <select id="f-tipo" required>
                 <option value="">Selecione uma opção...</option>
-                <option>Residencial Grandes Contas</option>
                 <option>Comercial</option>
                 <option>Condomínio</option>
                 <option>Industrial</option>
                 <option>Usina Solar</option>
+                <option>Residencial Grandes Contas</option>
               </select>
             </div>
             <div class="fg"><label for="f-valor">Valor médio da fatura de energia</label>
@@ -375,7 +375,7 @@ section{padding:74px 0}
                 <option value="Acima de R$ 10.000">Acima de R$ 10.000</option>
               </select>
             </div>
-            <div class="form-err" id="f-qual-err">No momento atendemos empresas com conta de energia acima de R$ 2.000/mês.</div>
+            <div class="form-err" id="f-qual-err">Nosso foco são empresas (PJ) de maior porte, com conta acima de R$ 2.000/mês.</div>
             <button type="button" class="btn-form" onclick="step1Next()">Avançar <span class="material-icons" aria-hidden="true">arrow_forward</span></button>
           </div>
 
@@ -767,7 +767,7 @@ function step1Next(){
   if(!tipo){alert('Selecione o tipo do imóvel / projeto.');document.getElementById('f-tipo').focus();return;}
   if(!faixa){alert('Selecione a faixa da conta de energia.');document.getElementById('f-valor').focus();return;}
   if(faixa==='Abaixo de R$ 2.000'){
-    showErr('f-qual-err','Nosso atendimento é para empresas com conta acima de R$ 2.000/mês. Para valores menores, fale conosco pelo site principal.');
+    showErr('f-qual-err','Nosso foco são empresas (PJ) de maior porte, com conta acima de R$ 2.000/mês. Para valores menores, fale conosco pelo site principal.');
     document.getElementById('f-valor').focus();
     try{ if(window.fbq) fbq('trackCustom','LeadNaoQualificado'); }catch(e){}
     return;
