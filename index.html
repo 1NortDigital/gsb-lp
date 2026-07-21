@@ -296,25 +296,22 @@ section{padding:74px 0}
   <div class="container">
     <div class="hero-grid">
       <div class="hero-left">
-        <h2>Empresário: sua conta de luz passa de R$ 2.000 por mês? Corte até 95% desse custo com ZERO de entrada.</h2>
-        <p class="sub">A única empresa que entrega o sistema sem receber valores adiantados. Especializados e certificados para reduzir o custo de energia de condomínios, comércios e indústrias.</p>
+        <h2>A sua empresa no Rio pode reduzir até 95% da conta de luz — sem tirar R$ 1,00 do caixa.</h2>
+        <p class="sub">Instalamos a usina solar <strong style="color:#fff">própria da sua empresa</strong> sem pagamento adiantado: sistema financiado em até 120x, com até 120 dias de carência. A própria economia da energia paga a parcela do financiamento.</p>
         <div class="divider"></div>
         <ul class="hero-feats">
-          <li><span class="material-icons" aria-hidden="true">wb_sunny</span> Condomínio, comércio e indústria</li>
-          <li><span class="material-icons" aria-hidden="true">wb_sunny</span> Projeto 100% grátis</li>
-          <li><span class="material-icons" aria-hidden="true">wb_sunny</span> Parcelamento em até 120x</li>
-          <li><span class="material-icons" aria-hidden="true">wb_sunny</span> Carência de até 120 dias</li>
-          <li><span class="material-icons" aria-hidden="true">wb_sunny</span> Sistema 100% financiado</li>
-          <li><span class="material-icons" aria-hidden="true">wb_sunny</span> ZERO de entrada</li>
-          <li><span class="material-icons" aria-hidden="true">wb_sunny</span> Equipe operacional própria</li>
+          <li><span class="material-icons" aria-hidden="true">account_balance_wallet</span> Risco zero: sua empresa não descapitaliza</li>
+          <li><span class="material-icons" aria-hidden="true">verified</span> Homologação garantida na Light e Enel</li>
+          <li><span class="material-icons" aria-hidden="true">solar_power</span> Usina própria — não é assinatura nem desconto</li>
+          <li><span class="material-icons" aria-hidden="true">engineering</span> Engenharia e instalação com equipe própria</li>
         </ul>
       </div>
 
       <!-- FORM MULTI-STEP (igual original, ligado ao motor da agência) -->
       <div class="fcard" id="simule">
-        <span class="tag">Orçamento Grátis</span>
-        <h4>Descubra como ter energia solar sem investimento!</h4>
-        <p class="fsub">Consultoria gratuita para empresas com conta de luz <strong>acima de R$ 2.000/mês</strong>. Preencha e fale com um especialista.</p>
+        <span class="tag">Estudo Gratuito · Empresas</span>
+        <h4>Estudo de Viabilidade Corporativo</h4>
+        <p class="fsub">Descubra em minutos quanto a sua empresa pode economizar com uma usina solar própria. <strong>Gratuito e sem compromisso.</strong></p>
         <form id="leadForm" onsubmit="submitLead(event)">
           <!-- ETAPA 1: Consumo e Local -->
           <div class="step active" id="step1">
@@ -328,10 +325,17 @@ section{padding:74px 0}
                 <option>Residencial</option>
               </select>
             </div>
-            <div class="fg"><label for="f-valor">Qual o valor médio da sua fatura de energia? *</label>
-              <input type="text" id="f-valor" inputmode="numeric" placeholder="A partir de R$ 2.000,00" autocomplete="off" required>
-              <small class="num2words" id="valorWords" style="display:none"></small>
-              <small style="display:block;font-size:11.5px;color:#9aa4a6;margin-top:5px">Atendemos empresas com conta a partir de R$ 2.000/mês.</small>
+            <div class="fg"><label for="f-valor">Valor médio da conta de luz da empresa *</label>
+              <select id="f-valor" required>
+                <option value="">Selecione a faixa...</option>
+                <option value="Menos de R$ 2.000/mês">Menos de R$ 2.000/mês</option>
+                <option value="R$ 2.000 a R$ 4.000/mês">R$ 2.000 a R$ 4.000/mês</option>
+                <option value="R$ 4.000 a R$ 8.000/mês">R$ 4.000 a R$ 8.000/mês</option>
+                <option value="R$ 8.000 a R$ 15.000/mês">R$ 8.000 a R$ 15.000/mês</option>
+                <option value="R$ 15.000 a R$ 30.000/mês">R$ 15.000 a R$ 30.000/mês</option>
+                <option value="Acima de R$ 30.000/mês">Acima de R$ 30.000/mês</option>
+              </select>
+              <small style="display:block;font-size:11.5px;color:#9aa4a6;margin-top:5px">O estudo de viabilidade é para empresas com conta a partir de R$ 2.000/mês.</small>
             </div>
             <div class="fg"><label for="f-cidade">Cidade / Local *</label>
               <select id="f-cidade" required>
@@ -693,7 +697,6 @@ function numToWords(n){
 
 window.addEventListener('DOMContentLoaded',()=>{
   ['f-tel','m-tel'].forEach(id=>{const el=document.getElementById(id);if(el)applyPhoneMask(el);});
-  const val=document.getElementById('f-valor');if(val)applyMoneyMask(val);
 });
 
 // ---- VALIDATIONS ----
@@ -704,15 +707,16 @@ function hideErr(id){const e=document.getElementById(id);if(e)e.classList.remove
 // ---- MULTI-STEP (Etapa 1 = Consumo e Local · gate R$ 2.000) ----
 function nextStep(){
   const sistema=document.getElementById('f-sistema').value;
+  const faixa=document.getElementById('f-valor').value;
   const cidade=document.getElementById('f-cidade').value;
   hideErr('f-qual-err');
   if(!sistema){alert('Selecione o tipo do sistema.');return;}
-  if(!valorNum||valorNum<=0){alert('Informe o valor médio da sua fatura de energia.');document.getElementById('f-valor').focus();return;}
+  if(!faixa){alert('Selecione a faixa da conta de energia.');document.getElementById('f-valor').focus();return;}
   if(!cidade){alert('Selecione sua cidade / local.');document.getElementById('f-cidade').focus();return;}
-  if(valorNum<2000){
-    showErr('f-qual-err','No momento atendemos empresas com conta de energia acima de R$ 2.000/mês. Para valores menores, fale conosco pelo site principal.');
+  if(faixa==='Menos de R$ 2.000/mês'){
+    showErr('f-qual-err','Nosso estudo de viabilidade é para empresas com conta acima de R$ 2.000/mês. Para valores menores, fale conosco pelo site principal.');
     document.getElementById('f-valor').focus();
-    try{ if(window.fbq) fbq('trackCustom','LeadNaoQualificado',{valor:valorNum}); }catch(e){}
+    try{ if(window.fbq) fbq('trackCustom','LeadNaoQualificado'); }catch(e){}
     return;
   }
   document.getElementById('step1').classList.remove('active');
@@ -746,15 +750,16 @@ async function submitLead(e){
   if(!email){alert('Digite seu e-mail.');document.getElementById('f-email').focus();return;}
   const sistema=document.getElementById('f-sistema').value;
   const cidade=document.getElementById('f-cidade').value;
+  const faixa=document.getElementById('f-valor').value;
   const btn=document.getElementById('btn-submit');btn.classList.add('loading');
   document.getElementById('btn-submit-text').style.display='none';document.getElementById('spin-submit').style.display='inline-block';
   const ip=await getIP();const utms=mergeUTMs();
-  const payload={form_type:'lead_principal',pagina:PAGINA,nome,email,telefone:tel,sistema,cidade,valor_fatura:valorNum?valorNum.toLocaleString('pt-BR',{style:'currency',currency:'BRL'}):'',valor_fatura_num:String(valorNum||''),qualificado:'true',ip,...utms,timestamp:new Date().toISOString()};
+  const payload={form_type:'lead_principal',pagina:PAGINA,nome,email,telefone:tel,sistema,cidade,valor_fatura:faixa,qualificado:'true',ip,...utms,timestamp:new Date().toISOString()};
   await sendWebhook(payload);fireLead();
   dataLayer.push({event:'lead_gerado',form_type:'principal',telefone:tel,...utms});
   const wppMsg=encodeURIComponent(
-    `Olá GSB Energia Solar!\n\nVim pelo site e quero minha consultoria gratuita.\n\n`+
-    `*Nome:* ${nome}\n*WhatsApp:* ${tel}\n*E-mail:* ${email}\n*Tipo do sistema:* ${sistema}\n*Cidade:* ${cidade}\n*Fatura média:* ${payload.valor_fatura}`
+    `Olá GSB Energia Solar!\n\nVim pelo site e quero meu Estudo de Viabilidade Corporativo.\n\n`+
+    `*Nome:* ${nome}\n*WhatsApp:* ${tel}\n*E-mail:* ${email}\n*Tipo do sistema:* ${sistema}\n*Cidade:* ${cidade}\n*Conta de energia:* ${faixa}`
   );
   if(REDIRECT_OBRIGADO){window.location.href=REDIRECT_OBRIGADO;}
   else{window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${wppMsg}`,'_blank');btn.classList.remove('loading');document.getElementById('btn-submit-text').style.display='';document.getElementById('spin-submit').style.display='none';}
