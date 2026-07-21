@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Grupo Solar Brasil | Energia Solar para Empresas</title>
-<meta name="description" content="Única empresa que entrega seu sistema sem receber valores adiantados. Reduza até 95% da conta de energia da sua empresa com ZERO de entrada, projeto 100% grátis e financiamento em até 120x. Condomínios, comércios e indústrias no Rio de Janeiro.">
+<meta name="description" content="Para empresários com conta de luz acima de R$ 2.000/mês: reduza até 95% desse custo com energia solar, ZERO de entrada, projeto 100% grátis e financiamento em até 120x. Condomínios, comércios e indústrias no Rio de Janeiro.">
 <meta name="keywords" content="energia solar empresas, energia solar condomínio, energia solar indústria, energia solar comércio, GSB, Grupo Solar Brasil, Rio de Janeiro, usina solar, geração distribuída">
 <link rel="canonical" href="https://lp.gruposolarbrasil.com.br/">
 <meta name="geo.region" content="BR-RJ">
@@ -221,14 +221,69 @@ section{padding:74px 0}
 @keyframes wppPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
 
 @media(max-width:768px){section{padding:52px 0}.container{padding:0 18px}.proj-card>img{height:260px}}
+
+/* ===================== POLISH (mesma identidade) ===================== */
+/* logo bar vira header fino e sticky, com CTA */
+.logobar{position:sticky;top:0;z-index:300;transition:box-shadow .25s ease,padding .25s ease}
+.logobar.scrolled{box-shadow:0 6px 24px rgba(16,18,24,.10);padding:12px 0}
+.lb-inner{max-width:1240px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logobar img{height:56px;margin:0}
+.lb-cta{padding:12px 26px !important;font-size:15px !important}
+@media(max-width:620px){.lb-cta{display:none}.lb-inner{justify-content:center}}
+
+/* botões com profundidade */
+.btn{letter-spacing:.2px;box-shadow:0 8px 22px rgba(8,172,242,.28)}
+.btn-blue:hover{box-shadow:0 14px 32px rgba(8,172,242,.42)}
+.btn-wpp{box-shadow:0 8px 22px rgba(37,211,102,.30)}
+
+/* eyebrow acima dos títulos */
+.eyebrow{display:block;font-family:'Poppins';font-weight:700;font-size:12.5px;letter-spacing:2.6px;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+
+/* hero: leve refino de leitura */
+.hero-ov{background:linear-gradient(120deg,rgba(8,26,37,.92) 0%,rgba(8,26,37,.74) 45%,rgba(8,26,37,.5) 100%)}
+.hero-left h2{letter-spacing:-.3px}
+.fcard{border:1px solid rgba(255,255,255,.6)}
+.fcard .tag{box-shadow:0 6px 16px rgba(8,172,242,.35)}
+
+/* stats: numeração com brilho e leve separador */
+.stat{position:relative}
+.stat .n{text-shadow:0 6px 20px rgba(0,0,0,.16)}
+.stat:not(:last-child)::after{content:'';position:absolute;right:-12px;top:12%;height:76%;width:1px;background:rgba(255,255,255,.22)}
+@media(max-width:700px){.stat:not(:last-child)::after{display:none}}
+
+/* projects: barra de destaque no topo + imagem mais harmônica */
+.proj-card{position:relative}
+.proj-card>img{height:250px}
+.proj-card::after{content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--blue),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .3s ease;z-index:2}
+.proj-card:hover::after{transform:scaleX(1)}
+.proj-body h3{position:relative;padding-bottom:12px;margin-bottom:16px}
+.proj-body h3::before{content:'';position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:40px;height:3px;border-radius:3px;background:var(--gold)}
+
+/* why: ícone com anel e sombra */
+.why-ic{box-shadow:0 12px 26px rgba(8,172,242,.32);position:relative}
+.why-ic::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:1px solid rgba(8,172,242,.25)}
+.why-card{position:relative;overflow:hidden}
+.why-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--blue),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.why-card:hover::before{transform:scaleX(1)}
+
+/* about: moldura na foto */
+.about-imgs .im1{border:6px solid #fff}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
 
-<!-- LOGO BAR -->
-<div class="logobar">
-  <a href="#"><img src="https://lp.gruposolarbrasil.com.br/wp-content/uploads/2022/10/logo-gsb.jpg" alt="Grupo Solar Brasil — Energia Solar" width="400" height="162"></a>
-</div>
+<!-- LOGO BAR (header sticky) -->
+<header class="logobar" id="logobar">
+  <div class="lb-inner">
+    <a href="#" aria-label="Grupo Solar Brasil"><img src="https://lp.gruposolarbrasil.com.br/wp-content/uploads/2022/10/logo-gsb.jpg" alt="Grupo Solar Brasil — Energia Solar" width="400" height="162"></a>
+    <a href="#simule" class="btn btn-blue lb-cta">Orçamento Grátis</a>
+  </div>
+</header>
 
 <!-- HERO -->
 <section class="hero" id="home">
@@ -241,8 +296,8 @@ section{padding:74px 0}
   <div class="container">
     <div class="hero-grid">
       <div class="hero-left">
-        <h2>Única empresa que entrega seu sistema sem receber valores adiantados + Carência na prática e sem risco..</h2>
-        <p class="sub">Somos especializados e certificados para reduzir até 95% do seu custo de energia.</p>
+        <h2>Empresário: sua conta de luz passa de R$ 2.000 por mês? Corte até 95% desse custo com ZERO de entrada.</h2>
+        <p class="sub">A única empresa que entrega o sistema sem receber valores adiantados. Especializados e certificados para reduzir o custo de energia de condomínios, comércios e indústrias.</p>
         <div class="divider"></div>
         <ul class="hero-feats">
           <li><span class="material-icons" aria-hidden="true">wb_sunny</span> Condomínio, comércio e indústria</li>
@@ -259,12 +314,12 @@ section{padding:74px 0}
       <div class="fcard" id="simule">
         <span class="tag">Orçamento Grátis</span>
         <h4>Descubra como ter energia solar sem investimento!</h4>
-        <p class="fsub">Preencha o formulário abaixo para receber nossa consultoria gratuita.</p>
+        <p class="fsub">Consultoria gratuita para empresas com conta de luz <strong>acima de R$ 2.000/mês</strong>. Preencha e fale com um especialista.</p>
         <form id="leadForm" onsubmit="submitLead(event)">
-          <!-- STEP 1 -->
+          <!-- ETAPA 1: Consumo e Local -->
           <div class="step active" id="step1">
             <div class="fg"><label for="f-sistema">Tipo do sistema *</label>
-              <select id="f-sistema" onchange="toggleEmpresa()" required>
+              <select id="f-sistema" required>
                 <option value="">—Escolha uma opção—</option>
                 <option>Condomínio</option>
                 <option>Comercial</option>
@@ -273,33 +328,31 @@ section{padding:74px 0}
                 <option>Residencial</option>
               </select>
             </div>
-            <div class="fg" id="wrap-empresa" style="display:none"><label for="f-empresa">Qual a razão social? *</label>
-              <input type="text" id="f-empresa" placeholder="Nome da empresa" autocomplete="organization">
-            </div>
             <div class="fg"><label for="f-valor">Qual o valor médio da sua fatura de energia? *</label>
-              <input type="text" id="f-valor" inputmode="numeric" placeholder="R$ 0,00" autocomplete="off" required>
+              <input type="text" id="f-valor" inputmode="numeric" placeholder="A partir de R$ 2.000,00" autocomplete="off" required>
               <small class="num2words" id="valorWords" style="display:none"></small>
+              <small style="display:block;font-size:11.5px;color:#9aa4a6;margin-top:5px">Atendemos empresas com conta a partir de R$ 2.000/mês.</small>
             </div>
-            <div class="fg"><label>Possui o CEP? *</label>
-              <div class="radios">
-                <label><input type="radio" name="possuiCep" value="Sim" onchange="toggleCep()"><span>Sim</span></label>
-                <label><input type="radio" name="possuiCep" value="Não sei no momento" onchange="toggleCep()"><span>Não sei no momento</span></label>
-              </div>
+            <div class="fg"><label for="f-cidade">Cidade / Local *</label>
+              <select id="f-cidade" required>
+                <option value="">Selecione...</option>
+                <optgroup label="Rio de Janeiro e Região Metropolitana">
+                  <option>Rio de Janeiro</option><option>Niterói</option><option>São Gonçalo</option><option>Duque de Caxias</option><option>Nova Iguaçu</option><option>Belford Roxo</option><option>São João de Meriti</option><option>Nilópolis</option><option>Mesquita</option><option>Queimados</option><option>Magé</option><option>Itaboraí</option><option>Maricá</option>
+                </optgroup>
+                <optgroup label="Interior / Outras regiões do RJ">
+                  <option>Petrópolis</option><option>Campos dos Goytacazes</option><option>Volta Redonda</option><option>Macaé</option><option>Cabo Frio</option><option>Angra dos Reis</option><option>Teresópolis</option><option>Nova Friburgo</option>
+                </optgroup>
+                <optgroup label="Outras"><option>Outra cidade do RJ</option><option>Outro estado</option></optgroup>
+              </select>
             </div>
-            <div id="wrap-cep" style="display:none">
-              <div class="f-row">
-                <div class="fg"><label for="f-cep">Qual CEP de instalação? *</label><input type="text" id="f-cep" placeholder="00000-000" inputmode="numeric"></div>
-                <div class="fg"><label for="f-numero">Nº do imóvel *</label><input type="text" id="f-numero" placeholder="Nº"></div>
-              </div>
-            </div>
+            <div class="form-err" id="f-qual-err">No momento atendemos empresas com conta de energia acima de R$ 2.000/mês.</div>
             <button type="button" class="btn-form" onclick="nextStep()">Avançar <span class="material-icons" aria-hidden="true">arrow_forward</span></button>
           </div>
-          <!-- STEP 2 -->
+          <!-- ETAPA 2: Contato (só empresas acima de R$ 2.000) -->
           <div class="step" id="step2">
             <div class="fg"><label for="f-nome">Digite seu nome *</label><input type="text" id="f-nome" placeholder="Seu nome completo" autocomplete="name"></div>
-            <div class="fg"><label for="f-email">Digite seu e-mail *</label><input type="email" id="f-email" placeholder="voce@empresa.com" autocomplete="email"></div>
             <div class="fg"><label for="f-tel">Digite seu WhatsApp com DDD *</label><input type="tel" id="f-tel" placeholder="(21) 90000-0000" inputmode="tel" autocomplete="tel"><div class="form-err" id="f-tel-err">Informe um WhatsApp válido com DDD.</div></div>
-            <div class="fg"><label for="f-tel2">Celular ou fixo alternativo com DDD</label><input type="tel" id="f-tel2" placeholder="DDD + Telefone (opcional)" inputmode="tel"></div>
+            <div class="fg"><label for="f-email">Digite seu e-mail *</label><input type="email" id="f-email" placeholder="voce@empresa.com" autocomplete="email"></div>
             <button type="submit" class="btn-form" id="btn-submit">
               <span id="btn-submit-text">Enviar solicitação</span>
               <span class="spinner" id="spin-submit"></span>
@@ -329,6 +382,7 @@ section{padding:74px 0}
 <section id="projetos">
   <div class="container">
     <div class="stc">
+      <span class="eyebrow">Projetos GSB</span>
       <h2>Últimos projetos</h2>
       <p>Somos excelentes no que fazemos. Conheça alguns dos nossos projetos para comércios, condomínios, supermercados, indústrias e muito mais.</p>
       <div class="divider center"></div>
@@ -407,8 +461,9 @@ section{padding:74px 0}
 <section class="about" id="grupo">
   <div class="container">
     <div class="stc">
+      <span class="eyebrow">Institucional</span>
       <h2>Conheça o Grupo GSB</h2>
-      <p>Somos excelentes no que fazemos. Conheça alguns dos nossos projetos para comércios, condomínios, supermercados, indústrias e muito mais.</p>
+      <p>Assista ao vídeo e conheça a GSB — referência em usinas solares para condomínios, comércios, supermercados e indústrias.</p>
       <div class="divider center"></div>
     </div>
     <div class="video-wrap">
@@ -444,8 +499,8 @@ section{padding:74px 0}
 <!-- BAND CTA -->
 <section class="band">
   <div class="container">
-    <h2>Reduza até 95% da sua conta de luz com ZERO de entrada do seu bolso.</h2>
-    <p>Faça agora um orçamento do seu próprio sistema com as melhores condições e equipamentos do mercado.</p>
+    <h2>Sua empresa gasta mais de R$ 2.000/mês com energia? Reduza até 95% com ZERO de entrada do seu bolso.</h2>
+    <p>Faça agora um orçamento do sistema da sua empresa com as melhores condições e equipamentos do mercado.</p>
     <a href="#simule" class="btn btn-blue">Orçamento Grátis</a>
   </div>
 </section>
@@ -454,6 +509,7 @@ section{padding:74px 0}
 <section class="why" id="procedures">
   <div class="container">
     <div class="stc">
+      <span class="eyebrow">Diferenciais</span>
       <h2>Por que escolher a GSB?</h2>
       <p>Descubra os verdadeiros motivos para você escolher a GSB e que você só encontra aqui!</p>
       <div class="divider center"></div>
@@ -557,6 +613,24 @@ saveUTMsCookies();
   setInterval(()=>{slides[i].classList.remove('active');i=(i+1)%slides.length;slides[i].classList.add('active');},5000);
 })();
 
+// ---- HEADER SHADOW ON SCROLL ----
+(function(){
+  const hb=document.getElementById('logobar');if(!hb)return;
+  const onScroll=()=>hb.classList.toggle('scrolled',window.scrollY>20);
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+})();
+
+// ---- REVEAL ON SCROLL ----
+(function(){
+  const sel='.proj-card,.why-card,.video-wrap,.about-imgs,.about-txt,.stc,.stat';
+  const els=document.querySelectorAll(sel);if(!els.length)return;
+  els.forEach((e,i)=>{e.classList.add('reveal');e.style.transitionDelay=(Math.min(i%3,2)*0.08)+'s';});
+  if('IntersectionObserver'in window){
+    const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+    els.forEach(e=>io.observe(e));
+  } else els.forEach(e=>e.classList.add('in'));
+})();
+
 // ---- COUNTERS ----
 function runCounters(){
   document.querySelectorAll('.stat .n[data-count]').forEach(el=>{
@@ -618,36 +692,28 @@ function numToWords(n){
 }
 
 window.addEventListener('DOMContentLoaded',()=>{
-  ['f-tel','f-tel2','m-tel'].forEach(id=>{const el=document.getElementById(id);if(el)applyPhoneMask(el);});
-  const cep=document.getElementById('f-cep');if(cep)applyCepMask(cep);
+  ['f-tel','m-tel'].forEach(id=>{const el=document.getElementById(id);if(el)applyPhoneMask(el);});
   const val=document.getElementById('f-valor');if(val)applyMoneyMask(val);
 });
 
-// ---- FORM CONDITIONALS ----
-function toggleEmpresa(){
-  const v=document.getElementById('f-sistema').value;
-  document.getElementById('wrap-empresa').style.display=(['Comercial','Condomínio','Indústria','Rural'].includes(v))?'block':'none';
-}
-function toggleCep(){
-  const sim=document.querySelector('input[name="possuiCep"]:checked');
-  document.getElementById('wrap-cep').style.display=(sim&&sim.value==='Sim')?'block':'none';
-}
+// ---- VALIDATIONS ----
 function validPhone(p){return p.replace(/\D/g,'').length>=10}
 function showErr(id,m){const e=document.getElementById(id);if(e){e.textContent=m;e.classList.add('show')}}
 function hideErr(id){const e=document.getElementById(id);if(e)e.classList.remove('show')}
 
-// ---- MULTI-STEP ----
+// ---- MULTI-STEP (Etapa 1 = Consumo e Local · gate R$ 2.000) ----
 function nextStep(){
   const sistema=document.getElementById('f-sistema').value;
+  const cidade=document.getElementById('f-cidade').value;
+  hideErr('f-qual-err');
   if(!sistema){alert('Selecione o tipo do sistema.');return;}
-  const empWrap=document.getElementById('wrap-empresa');
-  if(empWrap.style.display!=='none' && !document.getElementById('f-empresa').value.trim()){alert('Informe a razão social.');document.getElementById('f-empresa').focus();return;}
   if(!valorNum||valorNum<=0){alert('Informe o valor médio da sua fatura de energia.');document.getElementById('f-valor').focus();return;}
-  const cepSel=document.querySelector('input[name="possuiCep"]:checked');
-  if(!cepSel){alert('Informe se possui o CEP.');return;}
-  if(cepSel.value==='Sim'){
-    if(!document.getElementById('f-cep').value.trim()){alert('Informe o CEP de instalação.');document.getElementById('f-cep').focus();return;}
-    if(!document.getElementById('f-numero').value.trim()){alert('Informe o número do imóvel.');document.getElementById('f-numero').focus();return;}
+  if(!cidade){alert('Selecione sua cidade / local.');document.getElementById('f-cidade').focus();return;}
+  if(valorNum<2000){
+    showErr('f-qual-err','No momento atendemos empresas com conta de energia acima de R$ 2.000/mês. Para valores menores, fale conosco pelo site principal.');
+    document.getElementById('f-valor').focus();
+    try{ if(window.fbq) fbq('trackCustom','LeadNaoQualificado',{valor:valorNum}); }catch(e){}
+    return;
   }
   document.getElementById('step1').classList.remove('active');
   document.getElementById('step2').classList.add('active');
@@ -667,35 +733,28 @@ async function sendWebhook(payload){
   catch(err){try{await fetch(WEBHOOK,{...opts,keepalive:true});}catch(e2){console.warn('[GSB] Webhook falhou:',e2);}return false;}
 }
 
-// ---- SUBMIT LEAD (form principal) ----
+// ---- SUBMIT LEAD (Etapa 2 = Contato · empresas acima de R$ 2.000) ----
 async function submitLead(e){
   e.preventDefault();
   const nome=document.getElementById('f-nome').value.trim();
-  const email=document.getElementById('f-email').value.trim();
   const tel=document.getElementById('f-tel').value;
-  const tel2=document.getElementById('f-tel2').value;
+  const email=document.getElementById('f-email').value.trim();
   hideErr('f-tel-err');
   if(!nome){alert('Digite seu nome.');document.getElementById('f-nome').focus();return;}
-  if(!email){alert('Digite seu e-mail.');document.getElementById('f-email').focus();return;}
   if(!validPhone(tel)){showErr('f-tel-err','Informe um WhatsApp válido com DDD.');return;}
   if(tel.replace(/\D/g,'').startsWith('55')){showErr('f-tel-err','Não use o DDI 55, apenas DDD + número.');return;}
+  if(!email){alert('Digite seu e-mail.');document.getElementById('f-email').focus();return;}
   const sistema=document.getElementById('f-sistema').value;
-  const empresa=document.getElementById('f-empresa').value;
-  const cepSel=document.querySelector('input[name="possuiCep"]:checked');
-  const cep=document.getElementById('f-cep').value;
-  const numero=document.getElementById('f-numero').value;
+  const cidade=document.getElementById('f-cidade').value;
   const btn=document.getElementById('btn-submit');btn.classList.add('loading');
   document.getElementById('btn-submit-text').style.display='none';document.getElementById('spin-submit').style.display='inline-block';
   const ip=await getIP();const utms=mergeUTMs();
-  const payload={form_type:'lead_principal',pagina:PAGINA,nome,email,telefone:tel,tel_alternativo:tel2,sistema,empresa,valor_fatura:valorNum?valorNum.toLocaleString('pt-BR',{style:'currency',currency:'BRL'}):'',valor_fatura_num:String(valorNum||''),possui_cep:cepSel?cepSel.value:'',cep,numero,ip,...utms,timestamp:new Date().toISOString()};
+  const payload={form_type:'lead_principal',pagina:PAGINA,nome,email,telefone:tel,sistema,cidade,valor_fatura:valorNum?valorNum.toLocaleString('pt-BR',{style:'currency',currency:'BRL'}):'',valor_fatura_num:String(valorNum||''),qualificado:'true',ip,...utms,timestamp:new Date().toISOString()};
   await sendWebhook(payload);fireLead();
   dataLayer.push({event:'lead_gerado',form_type:'principal',telefone:tel,...utms});
   const wppMsg=encodeURIComponent(
     `Olá GSB Energia Solar!\n\nVim pelo site e quero minha consultoria gratuita.\n\n`+
-    `*Nome:* ${nome}\n*E-mail:* ${email}\n*WhatsApp:* ${tel}\n*Tipo do sistema:* ${sistema}\n`+
-    (empresa?`*Razão social:* ${empresa}\n`:'')+
-    `*Fatura média:* ${payload.valor_fatura}`+
-    (cep?`\n*CEP:* ${cep} nº ${numero}`:'')
+    `*Nome:* ${nome}\n*WhatsApp:* ${tel}\n*E-mail:* ${email}\n*Tipo do sistema:* ${sistema}\n*Cidade:* ${cidade}\n*Fatura média:* ${payload.valor_fatura}`
   );
   if(REDIRECT_OBRIGADO){window.location.href=REDIRECT_OBRIGADO;}
   else{window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${wppMsg}`,'_blank');btn.classList.remove('loading');document.getElementById('btn-submit-text').style.display='';document.getElementById('spin-submit').style.display='none';}

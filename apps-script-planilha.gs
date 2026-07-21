@@ -16,8 +16,8 @@ var SHEET_ID = '1GCJB0kSGkSujP9HUSSPRr7fsPpY9c50Edn7uF1HrDHk';
 var SHEET_NAME = 'Leads'; // nome da aba; será criada automaticamente se não existir
 
 var COLS = [
-  'timestamp','form_type','pagina','nome','email','telefone','tel_alternativo',
-  'sistema','empresa','valor_fatura','valor_fatura_num','possui_cep','cep','numero','cidade','ip',
+  'timestamp','form_type','pagina','nome','email','telefone',
+  'sistema','cidade','valor_fatura','valor_fatura_num','qualificado','ip',
   'utm_source','utm_medium','utm_campaign','utm_content','utm_term',
   'gclid','fbclid','fbp','fbc','page_url','page_referer','landing_url','clickup_client_id'
 ];
